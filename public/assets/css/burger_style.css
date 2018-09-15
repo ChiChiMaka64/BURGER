@@ -1,0 +1,17 @@
+html{
+    background-color: yellow;
+}
+.jumbotron{
+    background-color: yellow;
+    text-align: center;
+    image-rendering: auto;
+}
+h1, h2{
+    color: darkgoldenrod;
+}
+img{
+    position: inherit;
+}
+input{
+    background-color: yellow;
+}
