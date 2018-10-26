@@ -1,0 +1,41 @@
+<h1>EAT! THAT! BURGER!</h1>
+
+<h2>Enter the burger you want to eat. Click the submit button when finished.</h2>
+
+<h2>Not Eaten</h2>
+
+<ul>
+  {{#each burger}}
+    {{#unless devoured}}
+      {{> burgers/burger-block uneaten=true}}
+    {{/unless}}
+  {{/each}}
+</ul>
+
+<h2>Eaten</h2>
+
+<ul>
+  {{#each burger}}
+    {{#if devoured}}
+      {{> burgers/burger-block uneaten=false}}
+    {{/if}}
+  {{/each}}
+</ul>
+
+
+<h2>Add a Burger</h2>
+<form class="create-form">
+
+  <div class="form-group">
+    <label for="ca">Burger Name:</label>
+    <input type="text" id="burger-input" name="burger-name">
+  </div>
+
+  <div class="form-group">
+    <label for="eaten">Want to eat it?</label><br>
+    <input type="radio" name="devoured" value="1" checked> Devour it!<br>
+    <input type="radio" name="uneaten" value="0" checked> Don't Eat It!
+  </div>
+
+  <button type="submit">Add Burger</button>
+</form>
