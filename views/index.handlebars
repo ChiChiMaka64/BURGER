@@ -5,7 +5,7 @@
 <h2>Not Eaten</h2>
 
 <ul>
-  {{#each burger}}
+  {{#each hbsObject}}
     {{#unless devoured}}
       {{> burgers/burger-block uneaten=true}}
     {{/unless}}
@@ -15,7 +15,7 @@
 <h2>Eaten</h2>
 
 <ul>
-  {{#each burger}}
+  {{#each hbsObject}}
     {{#if devoured}}
       {{> burgers/burger-block uneaten=false}}
     {{/if}}
@@ -33,9 +33,10 @@
 
   <div class="form-group">
     <label for="eaten">Want to eat it?</label><br>
-    <input type="radio" name="devoured" value="1" checked> Devour it!<br>
-    <input type="radio" name="uneaten" value="0" checked> Don't Eat It!
+    <input type="radio" name="devoured" value="1"> Devour it!<br>
+    <input type="radio" name="uneaten" value="0"> Don't Eat It!
   </div>
 
   <button type="submit">Add Burger</button>
 </form>
+<script src="../../public/js/burger.js"></script>
