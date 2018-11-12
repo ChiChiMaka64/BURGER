@@ -1,25 +1,25 @@
-<h1>EAT! THAT! BURGER!</h1>
 
-<h2>Enter the burger you want to eat. Click the submit button when finished.</h2>
+<div class="jumbotron">
+  <img src="/assets/images/burger.jpg" alt="burger">
+  <h1>EAT! THAT! BURGER!</h1>
+  <input class="form-control form-control-lg" type="text" placeholder="BURGER">
+  <button type="button" class="btn btn-success">Submit</button>
+  <h2>Enter the burger you want to eat. Click the submit button when finished.</h2>
+</div>
 
 <h2>Not Eaten</h2>
 
 <ul>
-  {{#each hbsObject}}
-    {{#unless devoured}}
-      {{> burgers/burger-block uneaten=true}}
-    {{/unless}}
-  {{/each}}
+  {{#each burgers}} 
+  {{#unless devoured}}
+  <button class="change-devour" data-id="{{id}}" data-newDevour="{{devoured}}">{{}}</button>{{/unless}} {{/each}}
 </ul>
 
 <h2>Eaten</h2>
 
 <ul>
-  {{#each hbsObject}}
-    {{#if devoured}}
-      {{> burgers/burger-block uneaten=false}}
-    {{/if}}
-  {{/each}}
+  {{#each burgers}} {{#if devoured}} <button class="change-devour" data-id="{{id}}" data-newDevour="{{devoured}}">{{}}</button> 
+  {{/if}} {{/each}}
 </ul>
 
 
@@ -32,11 +32,12 @@
   </div>
 
   <div class="form-group">
-    <label for="eaten">Want to eat it?</label><br>
-    <input type="radio" name="devoured" value="1"> Devour it!<br>
+    <label for="eaten">Want to eat it?</label>
+    <br>
+    <input type="radio" name="devoured" value="1"> Devour it!
+    <br>
     <input type="radio" name="uneaten" value="0"> Don't Eat It!
   </div>
 
   <button type="submit">Add Burger</button>
 </form>
-<script src="../../public/js/burger.js"></script>
