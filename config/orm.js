@@ -9,8 +9,8 @@ var connection = require("../config/connection.js");
 function printBurgerNames(num) {
   var arr = [];
 
-  for (var i = 0; i < num; i++) {
-    arr.push("burger_name");
+  for (var i = 0; i < num.length; i++) {
+    arr.push(num[i].toString());
   }
 
   return arr.toString();
