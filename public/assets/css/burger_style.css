@@ -5,13 +5,16 @@ html{
     background-color: yellow;
     text-align: center;
     image-rendering: auto;
+    font-family: 'Alfa Slab One', cursive;
 }
 h1, h2{
     color: darkgoldenrod;
+    font-family: 'Alfa Slab One', cursive;
 }
 img{
     position: inherit;
 }
 input{
     background-color: yellow;
+    font-family: 'Alfa Slab One', cursive;
 }
