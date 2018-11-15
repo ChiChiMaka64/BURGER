@@ -19,14 +19,14 @@
 
 <ul>
   {{#each burgers}} {{#unless devoured}}
-  <button class="change-devour" data-id="{{id}}" data-newDevour="{{devoured}}">{{this.burger_name}}</button>{{/unless}} {{/each}}
+  <button class="change-devour , btn btn-warning" data-id="{{id}}" data-newDevour="{{devoured}}">{{this.burger_name}}</button>{{/unless}} {{/each}}
 </ul>
 
 <h2>Eaten</h2>
 
 <ul>
   {{#each burgers}} {{#if devoured}}
-  <button class="change-devour" data-id="{{id}}" data-newDevour="{{devoured}}">{{this.burger_name}}</button>
+  <button class="change-devour , btn btn-success" data-id="{{id}}" data-newDevour="{{devoured}}">{{this.burger_name}}</button>
   {{/if}} {{/each}}
 </ul>
 
