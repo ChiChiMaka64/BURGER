@@ -12,11 +12,12 @@ router.get("/", function (req, res) {
   });
 });
 router.post("/api/burgers", function (req, res) {
+   var devoured=parseInt(req.body.devoured);
   console.log(req.body);
   burger.create([
-    'burger_name', "devoured"
+    "burger_name", "devoured"
   ], [
-      req.body.name, req.body.devoured
+      req.body.name, devoured
     ], function (result) {
       res.json({ id: result.insertId });
     });
